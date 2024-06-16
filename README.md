@@ -19,4 +19,4 @@ As the final submission, in this assignment you will need to demonstrate your kn
 
 The code must be your own; you might use functions of libraries such as `ones` or `randint` in `numpy`, but the main code must be your own work.
 _______________________________
-Lectuer: **Silvia Moros (PhD)**
+Lecturer: <a href="https://researchprofiles.herts.ac.uk/en/persons/s%C3%ADlvia-moros-espanol" target="_black">Silvia Moros</a>
