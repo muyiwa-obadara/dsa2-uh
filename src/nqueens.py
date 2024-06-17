@@ -58,16 +58,22 @@ def solve_nqueens(board: list, col: int) -> list:
         boards_index.append(np.array(board_instance_positions))
         boards.append(np.array(board))
         return True
+
     result = False
-    for i in range(size):
-        if (is_available(board, i, col)):
-            board[i][col] = 1
-            if mode == "1":
+    if mode == "1":
+        for i in range(size):
+            if (is_available(board, i, col)):
+                board[i][col] = 1
                 result = solve_nqueens(board, col + 1) or result
                 board[i][col] = 0
-            else:
-                result = solve_nqueens(board, col + np.random.randint(size - 1 - col)) or result
-    return result
+        return result
+    else:
+        i = np.random.randint(0, size)
+        if (is_available(board, i, col)):
+            board[i][col] = 1
+            result = solve_nqueens(board, col + 1) or result
+            board[i][col] = 0
+            return result
 
 solve_nqueens(board, 0)
 print(boards_index)
