@@ -1,25 +1,21 @@
-# Author: Muyiwa Obadara
-# Date: 27th December, 2023.
-# Question: 4
-"""A Python Module for Collatz Conjecture.
-Data Structure and Algorithms 2
-
-School of Physics, Engineering and Computer Science.
+"""Collatz Conjecture
 """
-
 def collatz(n: int) -> list:
-    """This function returns the Collatz series of a given integer n.
-    Args: n (int) input
+    """Returns the Collatz series for the given integer.
+    
+    Args: n (int) input integer
+    
+    Returns: collatz_series (list) the Collatz series for the given integer.
     """
     collatz_series: list = []
 
     def collatz_constructor(n:int) -> list:
         nonlocal collatz_series
         # The input and output are integers
-        # so, I use integer division, when dividing by 2.
+        # I used integer division, when dividing by 2.
 
-        # Make sure that the argument is an integer and it is greater than zero.
-        if n < 1 or not isinstance(n, int):
+        # Make sure the argument is an integer and it is greater than zero.
+        if not (n > 0 and isinstance(n, int)):
             raise ValueError("collatz(n): n must be an integer greater 0.")
         if n == 1:
             collatz_series.append(n)
